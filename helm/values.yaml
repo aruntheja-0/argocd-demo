@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: devopshint/app-helm:{{ .Values.env.APP_VERSION }}
+  repository: devopshint/app-helm
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  
+  tag: "{{ env.APP_VERSION }}"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
@@ -29,7 +29,7 @@ podAnnotations: {}
 podLabels: {}
 
 env:
-  APP_VERSION: 0655a0748c4326ac3966066727746aa1c5802a28
+  APP_VERSION: {{ .Values.env.APP_VERSION }}
 podSecurityContext: {}
   # fsGroup: 2000
 
