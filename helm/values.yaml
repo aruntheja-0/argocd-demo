@@ -43,10 +43,11 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 3000
-  targetPort: 3000
-  protocol: TCP
-  name: helm
+  - port: 3000
+    targetPort: 3000
+    nodePort: 30000
+    protocol: TCP
+    name: helm
 
 ingress:
   enabled: false
