@@ -4,14 +4,14 @@
 
 replicaCount: 1
 
-# image:
-#   repository: devopshint/app-helm
-#   pullPolicy: IfNotPresent
-#   # Overrides the image tag whose default is the chart appVersion.
-#   tag: "{{ .Values.env.APP_VERSION }}"
-# imagePullSecrets: []
-# nameOverride: ""
-# fullnameOverride: ""
+image:
+  repository: devopshint/app-helm
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  #tag: "{{ .Values.env.APP_VERSION }}"
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
 
 
 serviceAccount:
